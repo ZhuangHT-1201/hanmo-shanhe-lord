@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="《汉末山河领主》是一款以东汉末年州县为舞台的单机策略经营游戏。择地起兵、屯田治民、招贤练兵，逐鹿天下。"
+    />
+    <meta name="theme-color" content="#17221e" />
+    <title>汉末 · 山河领主</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="screen-reader-status" class="sr-only" aria-live="polite"></div>
+
+    <section id="landing-view" class="landing-view">
+      <div class="landing-ink" aria-hidden="true">
+        <svg viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="inkFade" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#e8dec9" stop-opacity="0" />
+              <stop offset="0.55" stop-color="#2f4239" stop-opacity="0.08" />
+              <stop offset="1" stop-color="#16201c" stop-opacity="0.36" />
+            </linearGradient>
+            <radialGradient id="sunWash" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#a9412e" stop-opacity="0.22" />
+              <stop offset="1" stop-color="#a9412e" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="1210" cy="230" r="210" fill="url(#sunWash)" />
+          <path
+            d="M20 715 C148 656 204 690 312 576 C355 532 382 468 420 466 C461 463 477 526 522 558 C566 589 624 571 669 533 C724 487 759 398 818 392 C854 388 873 430 904 476 C947 539 1008 559 1060 541 C1122 520 1148 451 1195 459 C1245 468 1250 558 1300 602 C1360 655 1450 617 1585 548 L1600 1000 L0 1000 Z"
+            fill="#22332c"
+            opacity="0.11"
+          />
+          <path
+            d="M-80 780 C140 662 259 730 390 631 C510 540 550 517 637 559 C731 603 753 716 846 681 C958 638 1002 511 1102 543 C1190 570 1242 714 1377 688 C1473 669 1510 619 1690 677"
+            fill="none"
+            stroke="#4c5d52"
+            stroke-width="2"
+            opacity="0.24"
+          />
+          <path
+            d="M54 849 C191 760 330 845 440 737 C536 642 634 670 702 747 C770 823 846 825 935 755 C1026 684 1121 709 1182 770 C1261 849 1396 829 1538 720"
+            fill="none"
+            stroke="#7d8c7f"
+            stroke-width="1.2"
+            opacity="0.3"
+          />
+          <path d="M0 0 H1600 V1000 H0 Z" fill="url(#inkFade)" />
+          <g fill="#1e2c26" opacity="0.19">
+            <path d="M1110 643 l37 -78 34 79 Z" />
+            <path d="M1156 643 l48 -112 45 112 Z" />
+            <path d="M1223 643 l31 -65 37 65 Z" />
+            <path d="M1274 643 l51 -96 43 96 Z" />
+            <path d="M1054 643 l25 -44 31 44 Z" />
+          </g>
+          <g fill="none" stroke="#7d8b7d" opacity="0.28">
+            <path d="M50 300 C270 205 520 260 753 152" stroke-width="1.4" />
+            <path d="M15 343 C230 258 470 316 713 212" stroke-width="0.8" />
+            <path d="M1030 866 C1185 785 1328 792 1520 682" stroke-width="1.1" />
+          </g>
+        </svg>
+      </div>
+
+      <header class="landing-bar">
+        <div class="wordmark" aria-label="汉末山河领主">
+          <span class="wordmark-seal">汉</span>
+          <span>
+            <strong>山河领主</strong>
+            <small>汉末州县经营志</small>
+          </span>
+        </div>
+        <div class="landing-bar-actions">
+          <button id="continue-button" class="text-button" type="button" data-action="continue-save" hidden>
+            续治旧档
+          </button>
+          <button class="text-button" type="button" data-action="open-guide">
+            玩法与史实
+          </button>
+        </div>
+      </header>
+
+      <main class="landing-layout">
+        <section class="landing-story" aria-labelledby="game-title">
+          <div class="vertical-verse" aria-hidden="true">
+            <span>山河</span><span>未定</span>
+          </div>
+          <p class="eyebrow">东汉末年 · 州县领主录</p>
+          <h1 id="game-title">
+            <span>汉末</span>
+            <span>山河领主</span>
+          </h1>
+          <p class="landing-lede">
+            你没有传国玉玺，也没有十万甲兵。你只有一方乡里、几仓薄粮，
+            和乱世里第一次属于你自己的选择。
+          </p>
+          <div class="feature-line" aria-label="游戏特色">
+            <span>十二州郡出生</span>
+            <i></i>
+            <span>史实名士登场</span>
+            <i></i>
+            <span>经营与征伐并重</span>
+          </div>
+          <blockquote>
+            “广积粮，缓称王。先安一县之民，再图一州之地。”
+          </blockquote>
+          <div class="landing-note">
+            <span class="brush-dot"></span>
+            <p>
+              地图为写意战略图，人物属性与登场时间经过游戏化处理；
+              地名、州郡、阵营与重大事件则尽可能贴合汉末历史。
+            </p>
+          </div>
+        </section>
+
+        <aside class="creation-sheet" aria-labelledby="creation-title">
+          <div class="sheet-topline">
+            <div>
+              <p class="sheet-kicker">择一方水土，起一支人马</p>
+              <h2 id="creation-title">乱世开局</h2>
+            </div>
+            <span class="sheet-stamp">乱世</span>
+          </div>
+
+          <div class="setup-block">
+            <label class="field-label" for="ruler-name">领主姓名</label>
+            <input
+              id="ruler-name"
+              class="text-input"
+              type="text"
+              maxlength="12"
+              value="沈砚"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
+
+          <div class="setup-block">
+            <div class="setup-heading">
+              <span class="field-label">乱世纪年</span>
+              <span class="step-number">壹</span>
+            </div>
+            <div id="era-options" class="era-options" role="radiogroup" aria-label="选择乱世纪年"></div>
+          </div>
+
+          <div class="setup-block">
+            <div class="setup-heading">
+              <span class="field-label">出生州县</span>
+              <span class="step-number">贰</span>
+            </div>
+            <p class="field-help">乡土决定初始物产、军备与当地可访贤才。</p>
+            <div id="origin-options" class="origin-options" role="radiogroup" aria-label="选择出生州县"></div>
+          </div>
+
+          <div class="setup-block">
+            <div class="setup-heading">
+              <span class="field-label">家世志向</span>
+              <span class="step-number">叁</span>
+            </div>
+            <div id="background-options" class="background-options" role="radiogroup" aria-label="选择家世志向"></div>
+          </div>
+
+          <div id="start-summary" class="start-summary" aria-live="polite"></div>
+
+          <button id="start-button" class="primary-button primary-button-wide" type="button" data-action="start-game">
+            <span>立誓起兵</span>
+            <small>开启汉末治世录</small>
+          </button>
+        </aside>
+      </main>
+
+      <footer class="landing-footer">
+        <span>单机 · 自动存档 · 离线可玩</span>
+        <span>为策略而写，非严格历史模拟</span>
+      </footer>
+    </section>
+
+    <section id="game-view" class="game-view" hidden>
+      <header class="game-topbar">
+        <div class="topbar-identity">
+          <span class="mini-seal">汉</span>
+          <div>
+            <p id="topbar-ruler" class="topbar-ruler">沈砚</p>
+            <p id="topbar-rank" class="topbar-rank">乡帅 · 阳翟</p>
+          </div>
+        </div>
+
+        <div class="topbar-date">
+          <span id="topbar-year">公元189年</span>
+          <strong id="topbar-season">春</strong>
+          <span id="topbar-month">三月</span>
+        </div>
+
+        <div id="resource-strip" class="resource-strip" aria-label="领地资源">
+          <div class="resource-item" title="粮食">
+            <span class="resource-icon">粮</span>
+            <span id="resource-grain">0</span>
+          </div>
+          <div class="resource-item" title="钱币">
+            <span class="resource-icon coin">钱</span>
+            <span id="resource-coin">0</span>
+          </div>
+          <div class="resource-item" title="木材">
+            <span class="resource-icon wood">木</span>
+            <span id="resource-wood">0</span>
+          </div>
+          <div class="resource-item" title="铁料">
+            <span class="resource-icon iron">铁</span>
+            <span id="resource-iron">0</span>
+          </div>
+          <div class="resource-item" title="威望">
+            <span class="resource-icon reputation">望</span>
+            <span id="resource-reputation">0</span>
+          </div>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="action-points" title="本月可执行的政令次数">
+            <span>政令</span>
+            <strong id="action-points-value">3</strong>
+            <small>/</small>
+            <span id="action-points-max">3</span>
+          </div>
+          <button class="icon-text-button" type="button" data-action="open-briefing">
+            军报
+          </button>
+          <button class="icon-text-button" type="button" data-action="save-game">
+            存档
+          </button>
+          <button class="icon-text-button" type="button" data-action="open-guide" aria-label="玩法说明">
+            说明
+          </button>
+        </div>
+      </header>
+
+      <div class="game-frame">
+        <nav class="game-nav" aria-label="主菜单">
+          <button class="nav-button active" type="button" data-action="nav-view" data-view="city" aria-current="page">
+            <span class="nav-glyph">邑</span>
+            <span>城郭</span>
+          </button>
+          <button class="nav-button" type="button" data-action="nav-view" data-view="world">
+            <span class="nav-glyph">图</span>
+            <span>天下</span>
+          </button>
+          <button class="nav-button" type="button" data-action="nav-view" data-view="people">
+            <span class="nav-glyph">士</span>
+            <span>人物</span>
+          </button>
+          <button class="nav-button" type="button" data-action="nav-view" data-view="court">
+            <span class="nav-glyph">策</span>
+            <span>朝政</span>
+          </button>
+          <button class="nav-button" type="button" data-action="nav-view" data-view="chronicle">
+            <span class="nav-glyph">志</span>
+            <span>史册</span>
+          </button>
+          <div class="nav-spacer"></div>
+          <button class="nav-button nav-reset" type="button" data-action="open-settings">
+            <span class="nav-glyph">设</span>
+            <span>设置</span>
+          </button>
+        </nav>
+
+        <main id="view-host" class="game-main" tabindex="-1"></main>
+        <aside id="right-rail" class="right-rail" aria-label="本月奏报"></aside>
+      </div>
+
+      <div id="mobile-turnbar" class="mobile-turnbar">
+        <button class="mobile-report-button" type="button" data-action="open-briefing">
+          本月军报
+        </button>
+        <button class="mobile-report-button" type="button" data-action="open-settings">
+          设置
+        </button>
+        <button class="mobile-next-turn" type="button" data-action="next-turn">
+          结束本月
+        </button>
+      </div>
+    </section>
+
+    <dialog id="game-dialog" class="game-dialog">
+      <div class="dialog-frame">
+        <button class="dialog-close" type="button" aria-label="关闭对话框">×</button>
+        <header class="dialog-heading">
+          <p id="dialog-kicker" class="dialog-kicker"></p>
+          <h2 id="dialog-title"></h2>
+          <p id="dialog-subtitle" class="dialog-subtitle"></p>
+        </header>
+        <div id="dialog-content" class="dialog-content"></div>
+        <footer id="dialog-actions" class="dialog-actions"></footer>
+      </div>
+    </dialog>
+
+    <div id="toast-region" class="toast-region" aria-live="polite"></div>
+
+    <script src="data.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
